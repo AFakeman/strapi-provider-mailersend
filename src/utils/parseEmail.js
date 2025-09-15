@@ -1,5 +1,3 @@
-"use strict";
-
 const parseEmail = (email) => {
   const emailRegex = /^(.*?)(?:\s*<([^>]+)>)?$/;
 

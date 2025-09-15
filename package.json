@@ -8,47 +8,27 @@
   "type": "commonjs",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "source": "./src/index.ts",
-      "default": "./dist/index.js"
+      "require": "./src/index.js",
+      "source": "./src/index.js",
+      "default": "./src/index.js"
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
   "files": [
-    "dist"
+    "src"
   ],
   "scripts": {
-    "check": "pack-up check",
-    "build": "pack-up build",
-    "watch": "pack-up watch",
-    "test": "yarn lint",
-    "test:ts": "tsc --build",
-    "lint": "eslint ."
   },
   "dependencies": {
     "mailersend": "^2.3.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.14.0",
-    "@strapi/pack-up": "^5.0.2",
-    "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "^8.13.0",
-    "@typescript-eslint/parser": "^8.13.0",
-    "eslint": "^9.14.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.3.3",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.13.0"
   },
   "name": "strapi-provider-mailersend",
   "description": "MailerSend provider for strapi email plugin",
-  "source": "./src/index.ts",
-  "types": "./dist/index.d.ts",
+  "source": "./src/index.js",
   "homepage": "https://github.com/dynolabs/strapi-provider-mailersend",
   "readme": "https://github.com/dynolabs/strapi-provider-mailersend#readme",
   "bugs": {
