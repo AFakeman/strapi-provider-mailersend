@@ -38,6 +38,15 @@ const main = {
           .setHtml(options.html || options.text)
           .setText(options.text || options.html);
 
+        if ('attachments' in options) {
+          const attachments = options.attachments.map((item) => new mailersend.Attachment(
+            item.content,
+            item.filename,
+            'attachment',
+          ));
+          emailParams.setAttachments(attachments);
+        }
+
         try {
           const response = await mailerSend.email.send(emailParams);
           return response;
